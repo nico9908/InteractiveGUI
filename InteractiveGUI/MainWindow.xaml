@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:InteractiveGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,-1,-0.4,1">
         <Label Content="FirstName" HorizontalAlignment="Left" Margin="160,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,0.449"/>
         <Label Content="LastName" HorizontalAlignment="Left" Margin="160,147,0,0" VerticalAlignment="Top"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="160,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.266,-0.594"/>
         <Label Content="TelephoneNo" HorizontalAlignment="Left" Margin="160,239,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="288,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="LastName" HorizontalAlignment="Left" Height="23" Margin="289,147,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="Age" HorizontalAlignment="Left" Height="23" Margin="288,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="TelephoneNo" HorizontalAlignment="Left" Height="23" Margin="288,243,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="288,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="LastName" HorizontalAlignment="Left" Height="23" Margin="289,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Age" HorizontalAlignment="Left" Height="23" Margin="288,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TelephoneNo" HorizontalAlignment="Left" Height="23" Margin="288,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button Content="New Person" HorizontalAlignment="Left" Margin="451,104,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Delete Person" HorizontalAlignment="Left" Margin="451,147,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Up" HorizontalAlignment="Left" Margin="451,195,0,0" VerticalAlignment="Top" Width="75"/>
