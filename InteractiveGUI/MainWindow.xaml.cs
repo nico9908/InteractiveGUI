@@ -30,10 +30,18 @@ namespace InteractiveGUI
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             cont.AddPerson();
-            FirstName.IsEnabled = true;
-            LastName.IsEnabled = true;
-            Age.IsEnabled = true;
-            TelephoneNo.IsEnabled = true;
+            FirstNameTextBox.IsEnabled = true;
+            LastNameTextBox.IsEnabled = true;
+            AgeTextBox.IsEnabled = true;
+            TelephoneNoTextBox.IsEnabled = true;
+
+            FirstNameTextBox.Text = null;
+            LastNameTextBox.Text = null;
+            AgeTextBox.Text = null;
+            TelephoneNoTextBox = null;
+
+            Person_Count.Text = "Person Count: " + cont.PersonCount;
+            Index.Text = "Index: " + cont.PersonIndex;
         }
     }
 }
