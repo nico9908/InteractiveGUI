@@ -25,10 +25,15 @@ namespace InteractiveGUI
         {
             InitializeComponent();
         }
+        Controller cont = Controller.GetInstance();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            cont.AddPerson();
+            FirstName.IsEnabled = true;
+            LastName.IsEnabled = true;
+            Age.IsEnabled = true;
+            TelephoneNo.IsEnabled = true;
         }
     }
 }
