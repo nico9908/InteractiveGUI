@@ -57,7 +57,7 @@ namespace InteractiveGUI
         }
         private void Btn_Down(object sender, RoutedEventArgs e)
         {
-            cont.NextPerson();
+            cont.PrevPerson();
         }
     }
 }
