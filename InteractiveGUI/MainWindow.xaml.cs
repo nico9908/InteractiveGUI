@@ -50,14 +50,29 @@ namespace InteractiveGUI
         private void Btn_DeletePerson(object sender, RoutedEventArgs e)
         {
             cont.DeletePerson();
+            cont.PrevPerson();
+            Person_Count.Text = "Person Count: " + cont.PersonCount;
+            Index.Text = "Index: " + cont.PersonIndex;
+
         }
         private void Btn_Up(object sender, RoutedEventArgs e)
         {
             cont.NextPerson();
+            ResetText();
+            Index.Text = "Index: " + cont.PersonIndex;
         }
         private void Btn_Down(object sender, RoutedEventArgs e)
         {
             cont.PrevPerson();
+            ResetText();
+            Index.Text = "Index: " + cont.PersonIndex;
+        }
+        private void ResetText()
+        {
+            FirstNameTextBox.Text = cont.CurrentPerson.FirstName;
+            LastNameTextBox.Text = cont.CurrentPerson.LastName;
+            AgeTextBox.Text = cont.CurrentPerson.Age.ToString();
+            TelephoneNoTextBox.Text = cont.CurrentPerson.TelephoneNo;
         }
     }
 }
