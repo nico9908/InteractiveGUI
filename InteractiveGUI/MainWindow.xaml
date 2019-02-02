@@ -15,12 +15,12 @@
         <TextBox Name="LastNameTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="289,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="AgeTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="TelephoneNoTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="New Person" IsEnabled="True" HorizontalAlignment="Left" Margin="451,104,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Delete Person" IsEnabled="False" HorizontalAlignment="Left" Margin="451,147,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Up" IsEnabled="False" HorizontalAlignment="Left" Margin="451,195,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Down" IsEnabled="False" HorizontalAlignment="Left" Margin="451,243,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Name="New_Person" Content="New Person" IsEnabled="True" HorizontalAlignment="Left" Margin="451,104,0,0" VerticalAlignment="Top" Width="75" Click="Btn_NewPerson"/>
+        <Button Name="Delete_Person" Content="Delete Person" IsEnabled="False" HorizontalAlignment="Left" Margin="451,147,0,0" VerticalAlignment="Top" Width="75" Click="Btn_DeletePerson"/>
+        <Button Name="Up" Content="Up" IsEnabled="False" HorizontalAlignment="Left" Margin="451,195,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Up"/>
+        <Button Name="Down" Content="Down" IsEnabled="False" HorizontalAlignment="Left" Margin="451,243,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Down"/>
         <TextBlock Name="Person_Count" HorizontalAlignment="Left" Margin="190,71,0,0" TextWrapping="Wrap" Text="Person Count: 0" VerticalAlignment="Top"/>
-        <TextBlock Name="Index_Count" HorizontalAlignment="Left" Margin="458,73,0,0" TextWrapping="Wrap" Text="Index: -1" VerticalAlignment="Top"/>
+        <TextBlock Name="Index" HorizontalAlignment="Left" Margin="458,73,0,0" TextWrapping="Wrap" Text="Index: -1" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
