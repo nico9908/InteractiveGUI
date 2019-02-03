@@ -11,10 +11,10 @@
         <Label Content="LastName" HorizontalAlignment="Left" Margin="160,147,0,0" VerticalAlignment="Top"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="160,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.266,-0.594"/>
         <Label Content="TelephoneNo" HorizontalAlignment="Left" Margin="160,239,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="FirstNameTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="LastNameTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="289,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="AgeTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="TelephoneNoTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="FirstNameTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextChange_Firstname"/>
+        <TextBox Name="LastNameTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="289,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextChange_LastName"/>
+        <TextBox Name="AgeTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextChange_Age"/>
+        <TextBox Name="TelephoneNoTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="288,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextChange_Tele"/>
         <Button Name="New_Person" Content="New Person" IsEnabled="True" HorizontalAlignment="Left" Margin="451,104,0,0" VerticalAlignment="Top" Width="75" Click="Btn_NewPerson"/>
         <Button Name="Delete_Person" Content="Delete Person" IsEnabled="False" HorizontalAlignment="Left" Margin="451,147,0,0" VerticalAlignment="Top" Width="75" Click="Btn_DeletePerson"/>
         <Button Name="Up" Content="Up" IsEnabled="False" HorizontalAlignment="Left" Margin="451,195,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Up"/>

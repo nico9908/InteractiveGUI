@@ -30,7 +30,7 @@ namespace InteractiveGUI
         private void Btn_NewPerson(object sender, RoutedEventArgs e)
         {
             cont.AddPerson();
-            AgeTextBox.Text = "0";
+     //     AgeTextBox.Text = "0";
             FirstNameTextBox.IsEnabled = true;
             LastNameTextBox.IsEnabled = true;
             AgeTextBox.IsEnabled = true;
@@ -69,7 +69,7 @@ namespace InteractiveGUI
             {
                 cont.NextPerson();
 
-                
+                ResetText();
             }
             //      cont.NextPerson();
             //      ResetText();
@@ -85,7 +85,7 @@ namespace InteractiveGUI
             {
                 cont.PrevPerson();
 
-                
+                ResetText();
             }
             //     cont.PrevPerson();
             //     ResetText();
@@ -113,7 +113,7 @@ namespace InteractiveGUI
             cont.CurrentPerson.Age = Convert.ToInt32(AgeTextBox.Text);
         }
 
-        private void TextChanged_Tele(object sender, TextChangedEventArgs e)
+        private void TextChange_Tele(object sender, TextChangedEventArgs e)
         {
             cont.CurrentPerson.TelephoneNo = TelephoneNoTextBox.Text;
         }
