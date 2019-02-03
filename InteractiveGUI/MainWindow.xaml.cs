@@ -30,7 +30,7 @@ namespace InteractiveGUI
         private void Btn_NewPerson(object sender, RoutedEventArgs e)
         {
             cont.AddPerson();
-     //     AgeTextBox.Text = "0";
+            AgeTextBox.Text = "0";
             FirstNameTextBox.IsEnabled = true;
             LastNameTextBox.IsEnabled = true;
             AgeTextBox.IsEnabled = true;
@@ -46,25 +46,49 @@ namespace InteractiveGUI
 
             Person_Count.Text = "Person Count: " + cont.PersonCount;
             Index.Text = "Index: " + cont.PersonIndex;
+     //     FirstNameTextBox.Text = cont.CurrentPerson.FirstName;
+     //     LastNameTextBox.Text = cont.CurrentPerson.LastName;
+     //     AgeTextBox.Text = cont.CurrentPerson.Age.ToString();
+     //     TelephoneNoTextBox.Text = cont.CurrentPerson.TelephoneNo;
         }
         private void Btn_DeletePerson(object sender, RoutedEventArgs e)
         {
             cont.DeletePerson();
             cont.PrevPerson();
-            Person_Count.Text = "Person Count: " + cont.PersonCount;
             Index.Text = "Index: " + cont.PersonIndex;
+            Person_Count.Text = "Person Count: " + cont.PersonCount;
 
         }
         private void Btn_Up(object sender, RoutedEventArgs e)
         {
-            cont.NextPerson();
-            ResetText();
+            if (cont.PersonIndex == cont.PersonCount - 1)
+            {
+                Up.IsEnabled = false;
+            }
+            else
+            {
+                cont.NextPerson();
+
+                
+            }
+            //      cont.NextPerson();
+            //      ResetText();
             Index.Text = "Index: " + cont.PersonIndex;
         }
         private void Btn_Down(object sender, RoutedEventArgs e)
         {
-            cont.PrevPerson();
-            ResetText();
+            if (cont.PersonIndex == 0)
+            {
+                Down.IsEnabled = false;
+            }
+            else
+            {
+                cont.PrevPerson();
+
+                
+            }
+            //     cont.PrevPerson();
+            //     ResetText();
             Index.Text = "Index: " + cont.PersonIndex;
         }
         private void ResetText()
@@ -73,6 +97,25 @@ namespace InteractiveGUI
             LastNameTextBox.Text = cont.CurrentPerson.LastName;
             AgeTextBox.Text = cont.CurrentPerson.Age.ToString();
             TelephoneNoTextBox.Text = cont.CurrentPerson.TelephoneNo;
+        }
+        private void TextChange_LastName(object sender, TextChangedEventArgs e)
+        {
+            cont.CurrentPerson.LastName = LastNameTextBox.Text;
+        }
+
+        private void TextChange_Firstname(object sender, TextChangedEventArgs e)
+        {
+            cont.CurrentPerson.FirstName = FirstNameTextBox.Text;
+        }
+
+        private void TextChange_Age(object sender, TextChangedEventArgs e)
+        {
+            cont.CurrentPerson.Age = Convert.ToInt32(AgeTextBox.Text);
+        }
+
+        private void TextChanged_Tele(object sender, TextChangedEventArgs e)
+        {
+            cont.CurrentPerson.TelephoneNo = TelephoneNoTextBox.Text;
         }
     }
 }
