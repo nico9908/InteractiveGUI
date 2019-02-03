@@ -61,34 +61,14 @@ namespace InteractiveGUI
         }
         private void Btn_Up(object sender, RoutedEventArgs e)
         {
-            if (cont.PersonIndex == cont.PersonCount - 1)
-            {
-                Up.IsEnabled = false;
-            }
-            else
-            {
-                cont.NextPerson();
-
-                ResetText();
-            }
-            //      cont.NextPerson();
-            //      ResetText();
+            cont.NextPerson();
+            ResetText();
             Index.Text = "Index: " + cont.PersonIndex;
         }
         private void Btn_Down(object sender, RoutedEventArgs e)
         {
-            if (cont.PersonIndex == 0)
-            {
-                Down.IsEnabled = false;
-            }
-            else
-            {
-                cont.PrevPerson();
-
-                ResetText();
-            }
-            //     cont.PrevPerson();
-            //     ResetText();
+            cont.PrevPerson();
+            ResetText();
             Index.Text = "Index: " + cont.PersonIndex;
         }
         private void ResetText()
